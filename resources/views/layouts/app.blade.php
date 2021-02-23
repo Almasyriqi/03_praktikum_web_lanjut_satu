@@ -33,7 +33,33 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    
+                                </li>
+                            @endif
+                            
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    
+                                </li>
+                            @endif
+                        @else
+                            <div class="dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    Menu
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="/home">Home</a>
+                                <a class="dropdown-item" href="/produk">Product</a>
+                                <a class="dropdown-item" href="/news/1">News</a>
+                                <a class="dropdown-item" href="/program">Program</a>
+                                <a class="dropdown-item" href="/about">About Us</a>
+                                <a class="dropdown-item" href="/contact">Contact Us</a>
+                                </div>
+                            </div>
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->
