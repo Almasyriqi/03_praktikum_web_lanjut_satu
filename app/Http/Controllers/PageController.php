@@ -9,7 +9,9 @@ class PageController extends Controller
     // Products
     public function produk()
     {
-        return view('product');
+        $produk = ['Celana', 'Jaket', 'Sepatu', 'Sandal'];
+        $url = ['celana', 'jaket', 'sepatu', 'sandal'];
+        return view('product', ['produk' => $produk, 'url' => $url]);
     }
 
     public function celana()
@@ -59,7 +61,9 @@ class PageController extends Controller
     // Program
     public function program()
     {
-        return view('program');
+        $program = ['Karir', 'Magang', 'Kunjungan Industri'];
+        $url = ['karir', 'magang', 'kunjungan'];
+        return view('program', ['program' => $program, 'url' => $url]);
     }
 
     public function karir()

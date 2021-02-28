@@ -5,10 +5,9 @@
 <div class="container">
     <h2>Halaman Daftar Produk</h2>
     <ul class="list-group">
-        <li class="list-group-item"><a href="produk/celana">Celana</a></li>
-        <li class="list-group-item"><a href="produk/jaket">Jaket</a></li>
-        <li class="list-group-item"><a href="produk/sepatu">Sepatu</a></li>			
-        <li class="list-group-item"><a href="produk/sandal">Sandal</a></li>			
+        @for($i = 0; $i < 4; $i++)
+        <li class="list-group-item"><a href="produk/{{$url[$i]}}">{{$produk[$i]}}</a></li>
+        @endfor
     </ul>
 </div>
 @endsection
